@@ -1,14 +1,14 @@
 package virtual_pet;
 
 public class VirtualPet {
+    private int hunger;
+    private String name;
+
 
     public static void main(String[] args){
         System.out.println("Welcome to Virtual Pets!");
     }
 
-
-
-    private String name;
 
     public VirtualPet(String name) {
 
@@ -20,6 +20,7 @@ public class VirtualPet {
     }
 
     public int getHunger() {
+
         return 20;
     }
 

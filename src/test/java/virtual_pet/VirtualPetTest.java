@@ -24,8 +24,8 @@ public class VirtualPetTest {
     //get hunger level, *write code to feed pet*
     public void shouldHaveHunger() {
         VirtualPet underTest = new VirtualPet("Noodles");
-        int result = underTest.getHunger();
-        assertEquals(20, result);
+        int hunger = underTest.getHunger();
+        assertEquals(20, hunger);
 
     }
 
@@ -34,29 +34,25 @@ public class VirtualPetTest {
     //write code to play with pet to lessen boredom level
     public void shouldHaveBoredom() {
         VirtualPet underTest = new VirtualPet("Noodles");
-        int result = underTest.getBoredom();
-        assertEquals(20, result);
+        int boredom = underTest.getBoredom();
+        assertEquals(20, boredom);
     }
 
     @Test
     //write code to take to dr to add health points
     public void shouldHaveHealth() {
         VirtualPet underTest = new VirtualPet("Noodles");
-        int result = underTest.getHealth();
-        assertEquals(20, result);
+        int health = underTest.getHealth();
+        assertEquals(20, health);
     }
 
     @Test
     //write code to clean cage and raise filth level
     public void shouldBeClean() {
         VirtualPet underTest = new VirtualPet("Noodles");
-        int result = underTest.getFilth();
-        assertEquals(20, result);
+        int filth = underTest.getFilth();
+        assertEquals(20, filth);
     }
-
-
-
-
 
 }
 
