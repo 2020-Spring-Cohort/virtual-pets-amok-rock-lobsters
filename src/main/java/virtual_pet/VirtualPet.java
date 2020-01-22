@@ -34,4 +34,11 @@ public class VirtualPet {
     public int getFilth() {
         return 20;
     }
+
+    @Override
+    public String toString() {
+        return "VirtualPet{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
