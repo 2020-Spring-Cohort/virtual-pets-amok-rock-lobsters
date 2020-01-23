@@ -1,8 +1,22 @@
 package virtual_pet;
 
-public class organic {
-    static String name;
+public class organic extends VirtualPet {
+    static String name
+
+    public organic(String name) {
+        super(name);
+    }
+    public int getHunger() {
+
+        return 20;
+    }
+    public int getHealth() {
+        return 20;
+    }
+
     public String getName(){return name;}
+    int getboredom; = 20;
+
 
     static {
 

@@ -9,4 +9,7 @@ public class robotic {
         robotic cat = new robotic();
         robotic.name = "KatTron3000";
     }
+    private int getCharge() {
+        return 20;
+    }
 }
