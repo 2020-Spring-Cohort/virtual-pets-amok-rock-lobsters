@@ -1,15 +1,12 @@
 package virtual_pet;
 
-public class robotic {
+public class robotic extends VirtualPet {
     static String name;
+    private int charge;
 
-    public static void main(String[] args) {
-        robotic dog = new robotic();
-        robotic.name = "Gizmo";
-        robotic cat = new robotic();
-        robotic.name = "KatTron3000";
+
+    public robotic(String name) {
+        super(name);
     }
-    private int getCharge() {
-        return 20;
-    }
+
 }

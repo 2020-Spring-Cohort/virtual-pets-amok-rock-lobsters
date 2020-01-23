@@ -1,9 +1,11 @@
 package virtual_pet;
 
 public class VirtualPet {
-    public int ;
+    public boolean isAlive ;
     public String name;
-
+    public int filth;
+    public int boredom;
+    public  int cageCleanliness;
 
 
     public VirtualPet(String name) {
@@ -22,4 +24,13 @@ public class VirtualPet {
     public int getFilth() {
         return 20;
     }
+
+    public int getCageCleanliness() {return 20;}
+
+
+
+    public boolean isAlive() {
+        return isAlive;
+    }
+
 }
