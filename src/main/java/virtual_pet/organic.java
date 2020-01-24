@@ -7,6 +7,7 @@ public class organic extends VirtualPet {
     private int thirst;
 
 
+
     public organic(String name) {
         super(name);
     }

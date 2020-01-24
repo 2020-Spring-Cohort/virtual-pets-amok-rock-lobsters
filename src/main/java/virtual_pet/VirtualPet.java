@@ -8,6 +8,7 @@ public class VirtualPet {
     public  int cageCleanliness;
 
 
+
     public VirtualPet(String name) {
 
         this.name = name;
@@ -26,6 +27,10 @@ public class VirtualPet {
     }
 
     public int getCageCleanliness() {return 20;}
+
+    public  int getHealth() {return 20;}
+
+    public  int getHunger() {return 20;}
 
 
 
