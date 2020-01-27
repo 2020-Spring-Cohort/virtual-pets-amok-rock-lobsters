@@ -20,15 +20,6 @@ public class VirtualPetTest {
         assertEquals(expected, "Noodles");
     }
 
-    @Test
-    //get hunger level, *write code to feed pet*
-    public void shouldHaveHunger() {
-        VirtualPet underTest = new VirtualPet("Noodles");
-        int hunger = underTest.getHunger();
-        assertEquals(20, hunger);
-
-    }
-
 
     @Test
     //write code to play with pet to lessen boredom level
@@ -38,25 +29,28 @@ public class VirtualPetTest {
         assertEquals(20, boredom);
     }
 
-    @Test
-    //write code to take to dr to add health points
-    public void shouldHaveHealth() {
-        VirtualPet underTest = new VirtualPet("Noodles");
-        int health = underTest.getHealth();
-        assertEquals(20, health);
-    }
 
     @Test
     //write code to clean cage and raise filth level
     public void cageShouldBeClean() {
         VirtualPet underTest = new VirtualPet("Noodles");
-        int filth = underTest.getCageCleanliness();
-        assertEquals(20, filth);
+        int cageCleanliness = underTest.getCageCleanliness();
+        assertEquals(20, cageCleanliness);
     }
-    public void animalShouldBeClean() {
+
+    @Test
+    public void petCleanliness() {
         VirtualPet underTest = new VirtualPet("Noodles");
         int filth = underTest.getFilth();
         assertEquals(20, filth);
+    }
+
+    @Test
+    public void isAlive(){
+        VirtualPet underTest = new VirtualPet("Noodles");
+        int lifePoints = underTest.lifePoints();
+        assertEquals(20, lifePoints);
+
     }
 
 }

@@ -1,7 +1,7 @@
 package virtual_pet;
 
 public class VirtualPet {
-    public boolean isAlive ;
+    public int isAlive = 20;
     public String name;
     public int filth =20;
     public int boredom =20;
@@ -30,12 +30,7 @@ public class VirtualPet {
 
     public  int getHealth() {return 20;}
 
-    public  int getHunger() {return 20;}
+    public int lifePoints() { return 20; }
 
-
-
-    public boolean isAlive() {
-        return isAlive;
-    }
 
 }

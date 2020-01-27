@@ -1,17 +1,18 @@
 package virtual_pet;
 
 public class Organic extends VirtualPet {
-    // how are organic objects affected
-
     private int hunger = 20;
     private int health = 20;
     private int thirst = 20;
 
-
-
     public Organic(String name) {
         super(name);
     }
+
+    public int getThirst() { return 20; }
+
+    public  int getHunger() {return 20;}
+
 
     @Override
     public String toString() {
@@ -26,4 +27,5 @@ public class Organic extends VirtualPet {
                 ", cageCleanliness=" + cageCleanliness +
                 '}';
     }
+
 }

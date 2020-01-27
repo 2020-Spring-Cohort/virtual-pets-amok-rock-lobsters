@@ -21,4 +21,8 @@ public class Robotic extends VirtualPet {
                 ", cageCleanliness=" + cageCleanliness +
                 '}';
     }
+
+    public int getCharge() {
+        return 20;
+    }
 }

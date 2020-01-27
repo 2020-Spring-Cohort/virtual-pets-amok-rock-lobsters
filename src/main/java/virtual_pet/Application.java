@@ -8,7 +8,8 @@ public class Application {
     public static void main(String[] args) {
         System.out.println("Welcome to Virtual Pets! Enter Start to begin.");
         Scanner input = new Scanner(System.in);
-         Shelter shelterRoster = new Shelter();
+        String start = input.next();
+        Shelter shelterRoster = new Shelter();
 
          Robotic pet1 = new Robotic("KittyMeowMeow");
          shelterRoster.dropOff(pet1);
@@ -18,8 +19,6 @@ public class Application {
         shelterRoster.dropOff(pet3);
         Organic pet4 = new Organic("Fido");
         shelterRoster.dropOff(pet4);
-
-
 
         System.out.println(shelterRoster);
 
