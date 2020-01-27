@@ -3,10 +3,11 @@ package virtual_pet;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Shelter {
 // take in pets, feed, play etc
-    private Map<String, VirtualPet> shelterRoster = new HashMap<>();
+    public Map<String, VirtualPet> shelterRoster = new HashMap<>();
 
     public void dropOff(VirtualPet newAnimal) {
         this.shelterRoster.put(newAnimal.getName(), newAnimal);
@@ -21,4 +22,6 @@ public class Shelter {
         }
         return status;
     }
+
+
 }

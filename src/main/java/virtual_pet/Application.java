@@ -1,18 +1,16 @@
 package virtual_pet;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
-public class Application {
+public class Application{
     public static void main(String[] args) {
         System.out.println("Welcome to Virtual Pets! Enter Start to begin.");
         Scanner input = new Scanner(System.in);
         String start = input.next();
-        Shelter shelterRoster = new Shelter();
 
-         Robotic pet1 = new Robotic("KittyMeowMeow");
-         shelterRoster.dropOff(pet1);
+        Shelter shelterRoster = new Shelter();
+        Robotic pet1 = new Robotic("KittyMeowMeow");
+        shelterRoster.dropOff(pet1);
         Robotic pet2 = new Robotic("Gizmo");
         shelterRoster.dropOff(pet2);
         Organic pet3 = new Organic("SlobberDog");
@@ -20,12 +18,11 @@ public class Application {
         Organic pet4 = new Organic("Fido");
         shelterRoster.dropOff(pet4);
 
-        System.out.println(shelterRoster);
 
-        System.out.println("Would you like to Add an Animal?");
+        System.out.println("Would you like to drop off an Animal?");
         String response = input.next();
         // change this to a while LOOP, set it to true. Check out the reference code to see examples of the true value.
-        if (response.equals("yes")) {
+        if (response.equalsIgnoreCase("yes")) {
 
             System.out.println("Is your animal Organic or Robotic");
             String newStateOfBeing = input.nextLine();
@@ -42,13 +39,25 @@ public class Application {
             else {
                 petToAdd = new Organic(newAnimal);
             }
+
             shelterRoster.dropOff(petToAdd);
             System.out.println(shelterRoster.statusCheck());
 
 
 
-        } else if (response.equals("No")) {
-            System.out.println("Why are you even here?");
+        } else if (response.equalsIgnoreCase("No")) {
+            System.out.println("Would you like to adopt a pet?");
+            System.out.println(HashMap);
+            Map set = shelterRoster.dropOff();
+            Iterator iterator = shelterRoster.iterator();
+            while(iterator.hasNext()){
+                Map.Entry mentry = (Map.Entry)iterator.next();
+                System.out.println((mentry.getValue()));
+                System.out.println(mentry.getKey());
+            }
+
+
+
         }
 
 

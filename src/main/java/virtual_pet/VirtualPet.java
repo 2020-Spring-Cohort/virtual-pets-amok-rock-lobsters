@@ -1,8 +1,8 @@
 package virtual_pet;
 
 public class VirtualPet {
-    public int isAlive = 20;
     public String name;
+    public int isAlive = 20;
     public int filth =20;
     public int boredom =20;
     public  int cageCleanliness = 20;
