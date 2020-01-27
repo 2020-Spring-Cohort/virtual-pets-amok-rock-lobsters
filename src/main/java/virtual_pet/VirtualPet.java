@@ -3,9 +3,9 @@ package virtual_pet;
 public class VirtualPet {
     public boolean isAlive ;
     public String name;
-    public int filth;
-    public int boredom;
-    public  int cageCleanliness;
+    public int filth =20;
+    public int boredom =20;
+    public  int cageCleanliness = 20;
 
 
 

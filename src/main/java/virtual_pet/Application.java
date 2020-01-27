@@ -1,19 +1,25 @@
 package virtual_pet;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
         System.out.println("Welcome to Virtual Pets! Enter Start to begin.");
         Scanner input = new Scanner(System.in);
-        Shelter shelterRoster = new Shelter();
+         Shelter shelterRoster = new Shelter();
+
+         Robotic pet1 = new Robotic("KittyMeowMeow");
+         shelterRoster.dropOff(pet1);
+        Robotic pet2 = new Robotic("Gizmo");
+        shelterRoster.dropOff(pet2);
+        Organic pet3 = new Organic("SlobberDog");
+        shelterRoster.dropOff(pet3);
+        Organic pet4 = new Organic("Fido");
+        shelterRoster.dropOff(pet4);
 
 
-
-        shelterRoster.put("KittyMeowMeow", "Robotic");
-        shelterRoster.put("SlobberDog", "Organic");
-        shelterRoster.put("Gizmo", "Robotic");
-        shelterRoster.put("Fido", "Organic");
 
         System.out.println(shelterRoster);
 
@@ -29,9 +35,18 @@ public class Application {
             System.out.println("What is the Name of the Animal?");
 
             String newAnimal = input.nextLine();
-            shelterRoster.put(newAnimal, newStateOfBeing);
+            VirtualPet petToAdd;
+            if (newStateOfBeing.equals("Robotic")){
 
-            System.out.println(shelterRoster.values());
+                petToAdd = new Robotic(newAnimal);
+            }
+            else {
+                petToAdd = new Organic(newAnimal);
+            }
+            shelterRoster.dropOff(petToAdd);
+            System.out.println(shelterRoster.statusCheck());
+
+
 
         } else if (response.equals("No")) {
             System.out.println("Why are you even here?");
@@ -43,4 +58,4 @@ public class Application {
 
 
 
-}
+
