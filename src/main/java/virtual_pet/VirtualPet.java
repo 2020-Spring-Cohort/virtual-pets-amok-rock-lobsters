@@ -6,6 +6,7 @@ public class VirtualPet {
     public int filth =20;
     public int boredom =20;
     public  int cageCleanliness = 20;
+    public String petType;
 
 
 
@@ -13,6 +14,7 @@ public class VirtualPet {
 
         this.name = name;
     }
+
 
     public String getName() {
         return name;
@@ -32,5 +34,7 @@ public class VirtualPet {
 
     public int lifePoints() { return 20; }
 
-
+    public String getPetType() {
+        return petType;
+    }
 }

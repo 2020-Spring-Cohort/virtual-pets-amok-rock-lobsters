@@ -52,6 +52,12 @@ public class VirtualPetTest {
         assertEquals(20, lifePoints);
 
     }
+    @Test
+    public void shouldHaveType(){
+        VirtualPet underTest = new VirtualPet("Noodles");
+        String expected = underTest.getPetType();
+        assertEquals(expected, "Organic");
+    }
 
 }
 

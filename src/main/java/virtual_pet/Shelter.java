@@ -23,5 +23,14 @@ public class Shelter {
         return status;
     }
 
+    public Map<String, VirtualPet> getShelterRoster(){
+        return shelterRoster;
+    }
 
+
+
+
+    public Object get(String name) {
+        return null;
+    }
 }

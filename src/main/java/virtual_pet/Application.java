@@ -32,29 +32,23 @@ public class Application{
 
             String newAnimal = input.nextLine();
             VirtualPet petToAdd;
-            if (newStateOfBeing.equals("Robotic")){
+            if (newStateOfBeing.equals("Robotic")) {
 
                 petToAdd = new Robotic(newAnimal);
-            }
-            else {
+            } else {
                 petToAdd = new Organic(newAnimal);
             }
 
             shelterRoster.dropOff(petToAdd);
             System.out.println(shelterRoster.statusCheck());
 
-
-
         } else if (response.equalsIgnoreCase("No")) {
             System.out.println("Would you like to adopt a pet?");
-            System.out.println(HashMap);
-            Map set = shelterRoster.dropOff();
-            Iterator iterator = shelterRoster.iterator();
-            while(iterator.hasNext()){
-                Map.Entry mentry = (Map.Entry)iterator.next();
-                System.out.println((mentry.getValue()));
-                System.out.println(mentry.getKey());
+            for (String name : shelterRoster.getShelterRoster().keySet()){
+                VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
+                System.out.println(name + "-" + vPet.getPetType());
             }
+
 
 
 
