@@ -1,12 +1,12 @@
 package virtual_pet;
 
-public class VirtualPet {
+public abstract class VirtualPet {
     public String name;
     public int isAlive = 20;
     public int filth =20;
     public int boredom =20;
     public  int cageCleanliness = 20;
-    public String petType;
+
 
 
 
@@ -34,7 +34,5 @@ public class VirtualPet {
 
     public int lifePoints() { return 20; }
 
-    public String getPetType() {
-        return petType;
-    }
+    public abstract String  getPetType();
 }

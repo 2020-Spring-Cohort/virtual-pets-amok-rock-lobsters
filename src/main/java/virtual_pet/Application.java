@@ -40,13 +40,19 @@ public class Application{
             }
 
             shelterRoster.dropOff(petToAdd);
-            System.out.println(shelterRoster.statusCheck());
+            for (String name : shelterRoster.getShelterRoster().keySet()){
+                VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
+                System.out.println(name + "-" + vPet.getPetType());
+            }
 
         } else if (response.equalsIgnoreCase("No")) {
             System.out.println("Would you like to adopt a pet?");
             for (String name : shelterRoster.getShelterRoster().keySet()){
                 VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
                 System.out.println(name + "-" + vPet.getPetType());
+                System.out.println("Do you want to at least feed or play with the above animal?They are very lonely and hungry");
+                String interactQuestion = input.nextLine();
+
             }
 
 

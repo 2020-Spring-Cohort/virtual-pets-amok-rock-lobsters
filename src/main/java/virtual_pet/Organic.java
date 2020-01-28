@@ -9,6 +9,11 @@ public class Organic extends VirtualPet {
         super(name);
     }
 
+    @Override
+    public String getPetType() {
+        return "Organic";
+    }
+
     public int getThirst() { return 20; }
 
     public  int getHunger() {return 20;}
