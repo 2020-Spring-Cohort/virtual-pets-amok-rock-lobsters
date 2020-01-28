@@ -67,7 +67,10 @@ public class Application {
             }
             if (response.equalsIgnoreCase("Visit")) {
 
-                System.out.println("Here are our pets you can visit \n Feed \n Play \n Charge \n Water");
+                System.out.println("Here are our pets you can visit" );
+                System.out.println(shelterRoster);
+                System.out.println("\n what would like to do on your visit?");
+                System.out.println("\n Feed \n Play \n Charge \n Water");
 
 
             }
