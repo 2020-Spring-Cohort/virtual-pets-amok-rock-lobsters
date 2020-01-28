@@ -3,11 +3,9 @@ package virtual_pet;
 public abstract class VirtualPet {
     public String name;
     public int isAlive = 20;
-    public int filth =20;
-    public int boredom =20;
-    public  int cageCleanliness = 20;
-
-
+    public int filth = 20;
+    public int boredom = 20;
+    public int cageCleanliness = 20;
 
 
     public VirtualPet(String name) {
@@ -28,11 +26,17 @@ public abstract class VirtualPet {
         return 20;
     }
 
-    public int getCageCleanliness() {return 20;}
+    public int getCageCleanliness() {
+        return 20;
+    }
 
-    public  int getHealth() {return 20;}
+    public int getHealth() {
+        return 20;
+    }
 
-    public int lifePoints() { return 20; }
+    public int lifePoints() {
+        return 20;
+    }
 
-    public abstract String  getPetType();
+    public abstract String getPetType();
 }

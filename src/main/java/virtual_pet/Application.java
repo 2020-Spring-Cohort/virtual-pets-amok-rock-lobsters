@@ -2,11 +2,10 @@ package virtual_pet;
 
 import java.util.*;
 
-public class Application{
+public class Application {
     public static void main(String[] args) {
-        System.out.println("Welcome to Virtual Pets! Enter Start to begin.");
+        System.out.println("\nWelcome to Virtual Pets!\n");
         Scanner input = new Scanner(System.in);
-        String start = input.next();
 
         Shelter shelterRoster = new Shelter();
         Robotic pet1 = new Robotic("KittyMeowMeow");
@@ -19,10 +18,11 @@ public class Application{
         shelterRoster.dropOff(pet4);
 
 
-        System.out.println("Would you like to drop off an Animal?");
-        String response = input.next();
+        System.out.println("Would you like to: \nDrop off an Animal, type drop, \nAdopt a Pet, type adopt, \nVisit pet ,type visit?");
+        String response = input.nextLine();
         // change this to a while LOOP, set it to true. Check out the reference code to see examples of the true value.
-        if (response.equalsIgnoreCase("yes")) {
+        if (response.equalsIgnoreCase("drop")) {
+
 
             System.out.println("Is your animal Organic or Robotic");
             String newStateOfBeing = input.nextLine();
@@ -32,7 +32,7 @@ public class Application{
 
             String newAnimal = input.nextLine();
             VirtualPet petToAdd;
-            if (newStateOfBeing.equals("Robotic")) {
+            if (newStateOfBeing.equalsIgnoreCase("Robotic")) {
 
                 petToAdd = new Robotic(newAnimal);
             } else {
@@ -40,27 +40,38 @@ public class Application{
             }
 
             shelterRoster.dropOff(petToAdd);
-            for (String name : shelterRoster.getShelterRoster().keySet()){
+            for (String name : shelterRoster.getShelterRoster().keySet()) {
                 VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
                 System.out.println(name + "-" + vPet.getPetType());
             }
-
-        } else if (response.equalsIgnoreCase("No")) {
-            System.out.println("Would you like to adopt a pet?");
-            for (String name : shelterRoster.getShelterRoster().keySet()){
-                VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
-                System.out.println(name + "-" + vPet.getPetType());
-                System.out.println("Do you want to at least feed or play with the above animal?They are very lonely and hungry");
-                String interactQuestion = input.nextLine();
-
-            }
-
-
-
 
         }
 
 
+        if (response.equalsIgnoreCase("adopt")) {
+            String interactQuestion = "";
+            while (!interactQuestion.equalsIgnoreCase("Quit")) {
+                System.out.println("Here are our avaliable pets");
+
+
+                for (String name : shelterRoster.getShelterRoster().keySet()) {
+                    VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
+                    System.out.println(name + "-" + vPet.getPetType());
+                }
+                System.out.println("Which pet would you like to Adopt?");
+
+                 interactQuestion = input.nextLine();
+                shelterRoster.remove(interactQuestion);
+
+
+            }
+            if (response.equalsIgnoreCase("Visit")) {
+
+                System.out.println("Here are our pets you can visit \n Feed \n Play \n Charge \n Water");
+
+
+            }
+        }
     }
 }
 

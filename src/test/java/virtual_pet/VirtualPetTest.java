@@ -47,18 +47,21 @@ public class VirtualPetTest {
     }
 
     @Test
-    public void isAlive(){
+    public void isAlive() {
         VirtualPet underTest = new Organic("Noodles");
         int lifePoints = underTest.lifePoints();
         assertEquals(20, lifePoints);
 
     }
+
     @Test
-    public void shouldHaveType(){
+    public void shouldHaveType() {
         VirtualPet underTest = new Organic("Noodles");
-        assertTrue(underTest instanceof  VirtualPet);
+        assertTrue(underTest instanceof VirtualPet);
         assertTrue(underTest instanceof Organic);
     }
+
+
 
 }
 
