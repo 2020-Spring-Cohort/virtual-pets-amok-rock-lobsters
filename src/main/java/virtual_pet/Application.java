@@ -28,10 +28,7 @@ public class Application {
                         "To drop off a pet, enter [drop]\n" +
                         "To adopt a pet, enter [adopt]\n" +
                         "To visit a pet in the shelter,enter [visit]");
-
                 String response = input.nextLine();
-                // change this to a while LOOP, set it to true. Check out the reference code to see examples of the true value.
-
 
                 if (response.equalsIgnoreCase("drop")) {
 
@@ -84,40 +81,108 @@ public class Application {
                     System.out.println("Here are the pets currently in the shelter!");
                     for (String name : shelterRoster.getShelterRoster().keySet()) {
                         VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
-                        System.out.println(name + "-" + vPet.getPetType());
+                        System.out.println(name + "-" + vPet);
                     }
                     System.out.println("There are a lot of things to do at the shelter! What do you want to do next?\n" +
-                            "1. Feed organic pet\n" +
-                            "2. Charge robotic pet\n" +
-                            "3. Give water\n" +
-                            "4. Play\n" +
-                            "5. Take to the doctor\n" +
-                            "6. Clean cage\n" +
-                            "7. Wash pet\n" +
-                            "8. Check pets' status");
+                            "1. Feed all organic pets\n" +
+                            "2. Feed one organic pet\n" +
+                            "3. Charge all robotic pets\n" +
+                            "4. Charge one robotic pet\n" +
+                            "5. Play with all pets\n" +
+                            "6. Play with one pet\n" +
+                            "7. Take all organic pets to the doctor\n" +
+                            "8. Take one organic pet to the doctor\n" +
+                            "9. Give water to organic pets\n" +
+                            "10. Clean all pet cages\n" +
+                            "11. Wash all pets\n" +
+                            "12. Check pets' status");
                     int interactMenuChoice = input.nextInt();
-                    switch(interactMenuChoice){
-                        case 1:
-                        case 2:
-                        case 3:
-                        case 4:
-                        case 5:
-                        case 6:
-                        case 7:
-                        case 8:
+                    switch (interactMenuChoice) {
+                        case 1: {
+                            shelterRoster.feedAllPets();
+                            shelterRoster.tickAllPets();
+//                            System.out.println("Would you like to feed [one] pet or [all pets]?");
+//                            String petToFeed = input.nextLine();
+
+//                            if (petToFeed.equalsIgnoreCase("all pets")) {
+//                                shelterRoster.feedAllPets();
+//                                shelterRoster.tickAllPets();
+//                            } else if (petToFeed.equalsIgnoreCase("one")) {
+//                                System.out.println("Enter the name of the pet you would like to feed.");
+//                                for (String name : shelterRoster.getShelterRoster().keySet()) {
+//                                    VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
+//                                    System.out.println(name + "-" + vPet);
+//                                }
+//
+//
+//                                String nameOfPetToFeed = input.nextLine();
+//                                if()
+                            /*If putting more menu options doesn't work, create if/else statements for feeding all or one pet*/
+
+                        }
+                        case 2: {
+                            System.out.println("Enter the name of the pet you would like to feed.");
+                            String petToFeed = input.nextLine();
+                            VirtualPet aPet = shelterRoster.getShelterRoster().get(petToFeed);
+                            if (aPet instanceof Organic) {
+                                Organic pet = ((Organic) shelterRoster.getShelterRoster().get(petToFeed));
+                                pet.feedPet();
+                            }
+
+
+                            for (String name : shelterRoster.getShelterRoster().keySet()) {
+                                VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
+                                System.out.println(name + "-" + vPet.getPetType());
+                            }
+                            input.nextLine();
+                        }
+
+                        case 3: {
+                            shelterRoster.chargeAllPets();
+                            shelterRoster.tickAllPets();
+                        }
+                        case 4: {
+                        }
+                        case 5: {
+                            shelterRoster.playWithAllPets();
+                            shelterRoster.tickAllPets();
+                        }
+                        case 6: {
+                        }
+                        case 7: {
+                            shelterRoster.takePetsToDoctor();
+                            shelterRoster.tickAllPets();
+                        }
+
+                        case 9: {
+                            shelterRoster.waterAllPets();
+                            shelterRoster.tickAllPets();
+                        }
+                        case 8: {
+                        }
+                        case 10: {
+                            shelterRoster.cleanAllCages();
+                            shelterRoster.tickAllPets();
+                        }
+                        case 11: {
+                            shelterRoster.washAllPets();
+                            shelterRoster.tickAllPets();
+                        }
+                        case 12:
                             for (String name : shelterRoster.getShelterRoster().keySet()) {
                                 VirtualPet vPet = shelterRoster.getShelterRoster().get(name);
                                 System.out.println(name + "-" + vPet);
                             }
                     }
-
                 }
             }
         } else {
             System.exit(0);
         }
+
     }
 }
+
 
 
 

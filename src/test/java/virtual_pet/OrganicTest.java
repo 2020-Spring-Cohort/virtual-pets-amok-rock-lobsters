@@ -33,7 +33,7 @@ class OrganicTest {
     @Test
     public void shouldBeAbleToFeedOrganicPet(){
         Organic underTest = new Organic ("Noodles");
-        underTest.feedPet();
+        underTest.feedAllPets();
         int result = underTest.getHunger();
         assertEquals(28, result);
     }

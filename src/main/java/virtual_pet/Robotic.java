@@ -10,10 +10,12 @@ public class Robotic extends VirtualPet {
         super(name);
     }
 
-    @Override
+//    @Override
     public void tick() {
         charge -= 2;
+        boredom -= 4;
         filth -= 3;
+        cageCleanliness -=2;
     }
 
     @Override
@@ -34,6 +36,9 @@ public class Robotic extends VirtualPet {
     }
 
     public int getCharge() {
-        return 20;
+        return charge;
+    }
+    public void chargePet(){
+        charge +=6;
     }
 }

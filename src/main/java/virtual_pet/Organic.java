@@ -9,12 +9,16 @@ public class Organic extends VirtualPet {
         super(name);
     }
 
-    @Override
+
+
+//    @Override
     public void tick() {
         hunger -= 4;
         health -= 2;
-        filth -= 3;
         thirst -= 2;
+        boredom -= 4;
+        filth -= 3;
+        cageCleanliness -=2;
     }
 
     @Override
@@ -23,11 +27,15 @@ public class Organic extends VirtualPet {
     }
 
     public int getThirst() {
-        return 20;
+        return thirst;
     }
 
     public int getHunger() {
         return hunger;
+    }
+
+    public int getHealth() {
+        return health;
     }
 
 
@@ -45,7 +53,18 @@ public class Organic extends VirtualPet {
                 '}';
     }
 
-    public void feedPet() {
+    public void feedAllPets() {
+        hunger += 8;
+    }
+
+    public void takeToDoctor(){
+        health += 10;
+    }
+    public void waterPet(){
+        thirst +=5;
+    }
+
+    public void feedPet(){
         hunger += 8;
     }
 

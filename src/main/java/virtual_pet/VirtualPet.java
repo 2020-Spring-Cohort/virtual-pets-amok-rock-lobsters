@@ -7,36 +7,46 @@ public abstract class VirtualPet {
     public int boredom = 20;
     public int cageCleanliness = 20;
 
-
     public VirtualPet(String name) {
 
         this.name = name;
     }
     public abstract void tick();
+    {
+
+
+    }
 
     public String getName() {
         return name;
     }
 
     public int getBoredom() {
-        return 20;
+        return boredom;
     }
 
     public int getFilth() {
-        return 20;
+        return filth;
     }
 
     public int getCageCleanliness() {
-        return 20;
+        return cageCleanliness;
     }
 
-    public int getHealth() {
-        return 20;
-    }
+    public boolean isAlive(){
+        return true;}
 
-    public int lifePoints() {
-        return 20;
-    }
+   public void play(){
+        boredom += 5;
+   }
+   public void clean(){
+        cageCleanliness +=10;
+   }
+   public void wash(){
+        filth +=4;
+   }
+
+
 
     public abstract String getPetType();
 }
