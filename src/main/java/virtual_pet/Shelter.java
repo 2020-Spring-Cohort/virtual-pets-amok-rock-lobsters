@@ -12,14 +12,9 @@ public class Shelter {
 
     public void dropOff(VirtualPet newAnimal) {
         this.shelterRoster.put(newAnimal.getName(), newAnimal);
-
-
     }
     public void remove(String petName) {
         this.shelterRoster.remove(petName);
-
-
-
     }
 
     public String statusCheck() {
@@ -30,6 +25,12 @@ public class Shelter {
         return status;
     }
 
+    public void tickAllPets(){
+        for (VirtualPet pet : shelterRoster.values()){
+            pet.tick();
+        }
+    }
+
     public Map<String, VirtualPet> getShelterRoster() {
         return shelterRoster;
     }
@@ -37,5 +38,9 @@ public class Shelter {
 
     public Object get(String name) {
         return null;
+    }
+
+    public boolean allPetsAlive() {
+        return true;
     }
 }

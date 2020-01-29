@@ -30,4 +30,12 @@ class OrganicTest {
         assertEquals(20, thirst);
     }
 
+    @Test
+    public void shouldBeAbleToFeedOrganicPet(){
+        Organic underTest = new Organic ("Noodles");
+        underTest.feedPet();
+        int result = underTest.getHunger();
+        assertEquals(28, result);
+    }
+
 }

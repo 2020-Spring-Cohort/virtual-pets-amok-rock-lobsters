@@ -2,7 +2,7 @@ package virtual_pet;
 
 public abstract class VirtualPet {
     public String name;
-    public int isAlive = 20;
+    public boolean isAlive = true;
     public int filth = 20;
     public int boredom = 20;
     public int cageCleanliness = 20;
@@ -12,7 +12,7 @@ public abstract class VirtualPet {
 
         this.name = name;
     }
-
+    public abstract void tick();
 
     public String getName() {
         return name;

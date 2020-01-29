@@ -11,6 +11,12 @@ public class Robotic extends VirtualPet {
     }
 
     @Override
+    public void tick() {
+        charge -= 2;
+        filth -= 3;
+    }
+
+    @Override
     public String getPetType() {
         return "Robotic";
     }
