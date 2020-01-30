@@ -37,6 +37,7 @@ public class Application {
 
                     System.out.println("Is your animal organic or robotic?");
                     String petType = input.nextLine();
+                    input.nextLine();
                     response.equalsIgnoreCase(petType);
 
                     System.out.println("What is the name of the pet?");
@@ -61,8 +62,6 @@ public class Application {
 
 
                 if (response.equalsIgnoreCase("adopt")) {
-//            String interactQuestion = "";
-//            while (!interactQuestion.equalsIgnoreCase("Quit")) {
                     System.out.println("Here are our available pets");
 
 
@@ -73,8 +72,9 @@ public class Application {
                     System.out.println("Which pet would you like to adopt?");
 
                     String response2 = input.nextLine();
+                    input.nextLine();
                     shelterRoster.remove(response2);
-                    System.out.println("Congratulations! You've just adopted " + response2 + "!");
+                    System.out.println("Congratulations! You've just adopted a pet!");
 
 
                 }
