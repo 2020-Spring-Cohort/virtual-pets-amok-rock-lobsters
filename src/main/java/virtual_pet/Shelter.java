@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Shelter {
+
     // take in pets, feed, play etc
     public HashMap<String, VirtualPet> shelterRoster = new HashMap<>();
 
@@ -35,9 +36,9 @@ public class Shelter {
     }
 
 
-    public Object get(String name) {
-        return null;
-    }
+//    public Object get(String name) {
+//        return null;
+//    }
 
     public boolean allPetsAlive() {
         return true;

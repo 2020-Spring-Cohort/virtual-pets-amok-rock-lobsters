@@ -26,6 +26,11 @@ public class Organic extends VirtualPet {
         return "Organic";
     }
 
+    @Override
+    public void play() {
+        boredom += 8;
+    }
+
     public int getThirst() {
         return thirst;
     }

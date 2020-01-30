@@ -24,6 +24,11 @@ public class Robotic extends VirtualPet {
     }
 
     @Override
+    public void play() {
+        boredom += 8;
+    }
+
+    @Override
     public String toString() {
         return "Robotic{" +
                 "charge=" + charge +

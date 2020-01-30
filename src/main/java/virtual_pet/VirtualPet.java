@@ -12,10 +12,7 @@ public abstract class VirtualPet {
         this.name = name;
     }
     public abstract void tick();
-    {
-
-
-    }
+    { }
 
     public String getName() {
         return name;
@@ -36,17 +33,16 @@ public abstract class VirtualPet {
     public boolean isAlive(){
         return true;}
 
-   public void play(){
-        boredom += 5;
-   }
+
    public void clean(){
         cageCleanliness +=10;
    }
    public void wash(){
         filth +=4;
    }
+   public abstract String getPetType();
 
-
-
-    public abstract String getPetType();
+    public void play(){
+        boredom += 5;
+    }
 }
